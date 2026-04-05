@@ -1,4 +1,4 @@
-# Tensor++
+# Tensor++ 
 
 ## Descripción
 
@@ -18,7 +18,7 @@ El proyecto implementa operaciones matemáticas, transformaciones y manejo efici
 
 ---
 
-## ⚙️ Funcionalidades implementadas
+## Funcionalidades implementadas
 
 ### 🔹 Clase Tensor
 
@@ -108,52 +108,152 @@ Output:       1000 × 10
 
 ## Ejecución del programa
 
-El archivo `main.cpp` incluye:
+El archivo `main.cpp` contiene pruebas completas de la librería, incluyendo:
 
-* Pruebas de creación de tensores
-* Operaciones básicas
-* Transformaciones
-* Ejecución de la red neuronal
+* creación de tensores
+* operaciones básicas
+* transformaciones
+* concatenación
+* producto punto y multiplicación matricial
+* simulación de una red neuronal simple
 
 ---
 
-##  Estructura del proyecto
+## Requisitos
+
+Para ejecutar el proyecto se necesita:
+
+* Compilador C++ con soporte para C++17 o superior
+* Git (opcional)
+* Un editor o IDE como:
+
+  * CLion
+  * Visual Studio Code
+  * Code::Blocks
+  * Dev-C++
+
+---
+
+## Ejecución paso a paso
+
+### 🔹 Opción 1: Descargar desde GitHub
+
+1. Ir al repositorio
+2. Click en **Code > Download ZIP**
+3. Extraer el proyecto
+
+#### Verificar archivos:
 
 ```
- Tensor++
- ┣ 📜 Tensor.h      # Declaraciones
- ┣ 📜 Tensor.cpp    # Implementación
- ┣ 📜 main.cpp      # Pruebas y ejecución
- ┣ 📜 README.md     # Documentación
+Tensor.h
+Tensor.cpp
+main.cpp
+README.md
+```
+
+#### Compilar:
+
+```bash
+g++ -std=c++17 main.cpp Tensor.cpp -o tensor_app
+```
+
+#### Ejecutar:
+
+En Windows:
+
+```bash
+tensor_app.exe
+```
+
+En Linux / macOS:
+
+```bash
+./tensor_app
 ```
 
 ---
 
-## Consideraciones importantes
+### 🔹 Opción 2: Clonar con Git
 
-* Máximo 3 dimensiones por tensor
-* `view` y `unsqueeze` no copian datos
-* `concat` sí reserva nueva memoria
-* Validación de dimensiones en todas las operaciones
-* Manejo seguro de memoria para evitar fugas
+```bash
+git clone https://github.com/RenzoChenHeng/Tensor-Plus-Plus.git
+cd Tensor-Plus-Plus
+g++ -std=c++17 main.cpp Tensor.cpp -o tensor_app
+```
+
+Ejecutar:
+
+```bash
+./tensor_app
+```
 
 ---
 
-## Autor(es)
+### 🔹 Opción 3: Ejecutar en CLion
+
+1. Abrir CLion
+2. Seleccionar **Open** y abrir la carpeta del proyecto
+3. Esperar a que cargue CMake
+4. Presionar Run 
+
+---
+
+## Salida esperada
+
+El programa imprimirá en consola:
+
+* pruebas de tensores
+* operaciones matemáticas
+* transformaciones
+* resultados de la red neuronal
+
+Ejemplo de salida:
+
+```
+input shape = {1000, 20, 20}
+x shape = {1000, 400}
+z1 shape = {1000, 100}
+y1 shape = {1000, 100}
+a1 shape = {1000, 100}
+z2 shape = {1000, 10}
+y2 shape = {1000, 10}
+output shape = {1000, 10}
+```
+
+---
+
+## Posibles errores
+
+* `g++ no reconocido` → instalar compilador
+* error de compilación → verificar archivos `.cpp`
+* no ejecuta → revisar ruta del ejecutable
+
+---
+
+## Estructura del proyecto
+
+```
+Tensor++
+ ┣ Tensor.h
+ ┣ Tensor.cpp
+ ┣ main.cpp
+ ┣ README.md
+```
+
+---
+
+## Autor
 
 * Renzo Chen Heng Liang Corrales
-* (Agregar compañero si aplica)
 
 ---
 
 ## Conclusión
 
-Este proyecto demuestra la implementación desde cero de una estructura compleja de datos, combinando:
+Este proyecto demuestra la implementación completa de una librería de tensores desde cero en C++, integrando:
 
 * manejo de memoria
 * programación orientada a objetos
 * operadores sobrecargados
 * polimorfismo
-* y simulación de modelos de machine learning
-
----
+* y una aplicación práctica con una red neuronal
